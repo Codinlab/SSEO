@@ -1,0 +1,22 @@
+﻿@model Codinlab.SSEO.Settings.SeoPartSettings
+
+<fieldset>
+    <div>
+        @Html.CheckBoxFor(m => m.AddCanonicalLink)
+        @Html.LabelFor(m => m.AddCanonicalLink, T("Add canonical link").ToString(), new { @class = "forcheckbox" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.DefaultDescriptionPattern, T("Default description pattern"))
+        @Html.TextBoxFor(m => m.DefaultDescriptionPattern, new { @class = "text large tokenized" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.DefaultKeywordsPattern, T("Default keywords pattern"))
+        @Html.TextBoxFor(m => m.DefaultKeywordsPattern, new { @class = "text large tokenized" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.DefaultRobotsMeta, T("Default robots meta"))
+        @Html.EnumDropDownListFor(m => m.DefaultRobotsMeta)
+    </div>
+</fieldset>
+
+@Display.TokenHint()

@@ -1,0 +1,20 @@
+﻿Name: SEO
+AntiForgery: enabled
+Author: Codinlab
+Website: http://www.codinlab.fr
+Version: 1.0
+OrchardVersion: 1.8
+Description: Social and SEO tools
+Category: SEO
+Dependencies: Orchard.jQuery, Orchard.Tokens
+Features:
+    Codinlab.SSEO.Social:
+		Name: Social
+        Description: Adds social networks specifical metas.
+		Category: Social
+		Dependencies: Codinlab.SSEO
+    Codinlab.SSEO.Shares:
+		Name: Shares
+        Description: Adds content sharing links.
+		Category: Social
+		Dependencies: Codinlab.SSEO.Social

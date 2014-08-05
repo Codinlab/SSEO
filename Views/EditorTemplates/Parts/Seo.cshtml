@@ -1,0 +1,40 @@
+﻿@model Codinlab.SSEO.ViewModels.SeoPartEditViewModel
+@{
+    Script.Require("jQuery");
+    Script.Include("~/Themes/TheAdmin/scripts/admin.js").AtFoot();
+    Script.Include("admin-seo.js").AtFoot();
+}
+
+<fieldset class="seo-wrapper">
+    <legend>@T("SEO")</legend>
+    <div class="expando">
+        <div>
+            @Html.LabelFor(m => m.Description, T("Description"))
+            @Html.CheckBoxFor(m => m.OverrideDescription)
+            @Html.LabelFor(m => m.OverrideDescription, T("Default").ToString(), new { @class = "forcheckbox", style = "display: none;" })
+            @Html.LabelFor(m => m.OverrideDescription, T("Override").ToString(), new { @class = "forcheckbox" })
+            @Html.TextBoxFor(m => m.DefaultDescription, new { @class = "text large", @readonly = "readonly", style = "display: none;" })
+            @Html.TextBoxFor(m => m.Description, new { @class = "text large" })
+            <span class="hint">@T("Content description")</span>
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Keywords, T("Keywords"))
+            @Html.CheckBoxFor(m => m.OverrideKeywords)
+            @Html.LabelFor(m => m.OverrideKeywords, T("Add").ToString(), new { @class = "forcheckbox", style = "display: none;" })
+            @Html.LabelFor(m => m.OverrideKeywords, T("Override").ToString(), new { @class = "forcheckbox" })
+            @Html.TextBoxFor(m => m.DefaultKeywords, new { @class = "text large", @readonly = "readonly" })
+            @Html.TextBoxFor(m => m.Keywords, new { @class = "text large" })
+            <span class="hint">@T("Content related keywords")</span>
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Robots, T("Robots"))
+            @Html.CheckBoxFor(m => m.OverrideRobots)
+            @Html.LabelFor(m => m.OverrideRobots, T("Default").ToString(), new { @class = "forcheckbox", style = "display: none;" })
+            @Html.LabelFor(m => m.OverrideRobots, T("Override").ToString(), new { @class = "forcheckbox" })
+            <br/>
+            @Html.TextBoxFor(m => m.DefaultRobots, new { @readonly = "readonly", style = "display: none;" })
+            @Html.EnumDropDownListFor(m => m.Robots)
+            <span class="hint">@T("Meta robots")</span>
+        </div>
+    </div>
+</fieldset>
