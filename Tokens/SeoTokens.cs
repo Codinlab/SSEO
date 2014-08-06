@@ -13,7 +13,7 @@ namespace Codinlab.SSEO.Tokens {
 
         public void Describe(DescribeContext context) {
             context.For("Text")
-                .Token("Excerpt:*", T("Excerpt:<text length>"), T("Removes HTML tags and limit text length."))
+                .Token("Excerpt:*", T("Excerpt:<text length>"), T("Removes HTML tags and limit text length."), "Text")
                 ;
         }
 
