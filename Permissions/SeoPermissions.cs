@@ -22,7 +22,7 @@ namespace Codinlab.SSEO.Permissions {
 
         public IEnumerable<Permission> GetPermissions() {
             var seoEnabledTypes = _contentDefinitionManager.ListTypeDefinitions()
-                .Where(ctd => ctd.Parts.Where(ctpd => ctpd.PartDefinition.Name == "SeoPart").Count() > 0);
+                .Where(ctd => ctd.Parts.Where(ctpd => ctpd.PartDefinition.Name == "SeoPart").Any());
 
             foreach (var typeDefinition in seoEnabledTypes) {
                 yield return DynamicPermissions.CreateDynamicPermission(EditSeoPart, typeDefinition);
