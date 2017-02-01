@@ -1,20 +1,9 @@
 ﻿Name: SEO
 AntiForgery: enabled
 Author: Codinlab
-Website: http://www.codinlab.fr
+Website: https://github.com/Codinlab/SSEO
 Version: 1.1
 OrchardVersion: 1.10
 Description: Social and SEO tools
 Category: SEO
-Dependencies: Orchard.jQuery, Orchard.Tokens
-Features:
-    Codinlab.SSEO.Social:
-		Name: Social
-        Description: Adds social networks specifical metas.
-		Category: Social
-		Dependencies: Codinlab.SSEO
-    Codinlab.SSEO.Shares:
-		Name: Shares
-        Description: Adds content sharing links.
-		Category: Social
-		Dependencies: Codinlab.SSEO.Social
+Dependencies: Orchard.Resources, Orchard.Tokens
