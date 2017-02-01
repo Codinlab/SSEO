@@ -2,7 +2,7 @@
 AntiForgery: enabled
 Author: Codinlab
 Website: http://www.codinlab.fr
-Version: 1.0
+Version: 1.1
 OrchardVersion: 1.10
 Description: Social and SEO tools
 Category: SEO
