@@ -3,7 +3,7 @@ AntiForgery: enabled
 Author: Codinlab
 Website: http://www.codinlab.fr
 Version: 1.0
-OrchardVersion: 1.8
+OrchardVersion: 1.10
 Description: Social and SEO tools
 Category: SEO
 Dependencies: Orchard.jQuery, Orchard.Tokens
