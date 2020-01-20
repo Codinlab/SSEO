@@ -18,6 +18,7 @@ namespace Codinlab.SSEO.ViewModels {
             this.Keywords = part.Keywords;
             this.OverrideRobots = part.OverrideRobots;
             this.Robots = part.Robots;
+            this.CanonicalUrl = part.CanonicalUrl;
         }
 
         #region SeoPart members
@@ -30,7 +31,9 @@ namespace Codinlab.SSEO.ViewModels {
         public virtual bool OverrideRobots { get; set; }
         public virtual SeoRobotsMeta Robots { get; set; }
         public virtual SeoRobotsMeta DefaultRobots { get; set; }
-        
+        public virtual string CanonicalUrl { get; set; }
+        public virtual string DefaultCanonicalUrl { get; set; }
+
         #endregion
 
     }

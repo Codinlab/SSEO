@@ -30,5 +30,10 @@ namespace Codinlab.SSEO.Models {
             get { return (SeoRobotsMeta)this.Retrieve<int>("Robots", versioned: true); }
             set { this.Store<int>("Robots", (int)value, versioned: true); }
         }
+
+        public string CanonicalUrl {
+            get { return this.Retrieve(x => x.CanonicalUrl, versioned: true); }
+            set { this.Store(x => x.CanonicalUrl, value, versioned: true); }
+        }
     }
 }

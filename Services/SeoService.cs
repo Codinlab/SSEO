@@ -97,7 +97,7 @@ namespace Codinlab.SSEO.Services {
 
         public string GetCanonicalUrl(SeoPart part) {
             SeoPartSettings settings = part.Settings.GetModel<SeoPartSettings>();
-            return settings.AddCanonicalLink ? GenerateCanonicalUrl(part) : String.Empty;
+            return part.CanonicalUrl ?? (settings.AddCanonicalLink ? GenerateCanonicalUrl(part) : String.Empty);
         }
 
         #region Private functions

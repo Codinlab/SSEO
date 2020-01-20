@@ -49,6 +49,7 @@ namespace Codinlab.SSEO.Drivers {
             model.DefaultRobots = settings.DefaultRobotsMeta;
             model.DefaultDescription = _seoService.GenerateDefaultDescription(part);
             model.DefaultKeywords = _seoService.GenerateDefaultKeywords(part);
+            model.DefaultCanonicalUrl = _seoService.GenerateCanonicalUrl(part);
 
             if (updater != null && updater.TryUpdateModel(model, Prefix, null, null)) {
                 part.Description = model.OverrideDescription ? model.Description : String.Empty;
@@ -56,6 +57,7 @@ namespace Codinlab.SSEO.Drivers {
                 part.Keywords = model.Keywords;
                 part.OverrideRobots = model.OverrideRobots;
                 part.Robots = model.OverrideRobots ? model.Robots : model.DefaultRobots;
+                part.CanonicalUrl = model.CanonicalUrl;
             }
 
             return ContentShape("Parts_SeoPart_Edit", () => {

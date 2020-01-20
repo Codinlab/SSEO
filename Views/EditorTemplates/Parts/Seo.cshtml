@@ -36,5 +36,10 @@
             @Html.EnumDropDownListFor(m => m.Robots)
             <span class="hint">@T("Meta robots")</span>
         </div>
+        <div>
+            @Html.LabelFor(m => m.CanonicalUrl, T("Canonical URL"))
+            @Html.TextBoxFor(m => m.CanonicalUrl, new { @class = "text large", placeholder = Model.DefaultCanonicalUrl })
+            <span class="hint">@T("Canonical URL")</span>
+        </div>
     </div>
 </fieldset>
